@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/Public/style.css" rel="stylesheet" type="text/css" />
+    <title>Document</title>
+</head>
+    <div >
+    <h1>Edit Pokemon Page</h1>
+</div>
+    <div >
+    <form action="/Pokedex/<%=index%>?_method=PUT" method="POST">
+      Name: <input type="text" name="name" value="<%=editPoke.name%>" /><br />
+      Image: <input type="text" name="img" value="<%=editPoke.img%>" /><br />
+      ID: <input type="text" name="id" value="<%=editPoke.id%>" /><br />
+      Classification: <input type="text" name="Classification" value="<%=editPoke.misc.classification%>" /><br />
+      Type: <input type="text" name="type" value="<%=editPoke.type%>" /><br />
+      <h4>Stats</h4>
+      Hp: <input type="text" name="hp" value="<%=editPoke.stats.hp%>" /><br />
+      Attack: <input type="text" name="attack" value="<%=editPoke.stats.attack%>" /><br />
+      Defense: <input type="text" name="defense" value="<%=editPoke.stats.defense%>" /><br />
+      Special attack: <input type="text" name="spattack" value="<%=editPoke.stats.spattack%>" /><br />
+      Special Defense: <input type="text" name="spdefense" value="<%=editPoke.stats.spdefense%>" /><br />
+      Speed: <input type="text" name="speed" value="<%=editPoke.stats.speed%>" /><br />
+      <h4>Damages</h4>
+      Normal: <input type="text" name="normal" value="<%=editPoke.damages.normal%>" /><br />
+      Fire: <input type="text" name="fire" value="<%=editPoke.damages.fire%>" /><br />
+      Water: <input type="text" name="water" value="<%=editPoke.damages.water%>" /><br />
+      Electric: <input type="text" name="electric" value="<%=editPoke.damages.electric%>" /><br />
+      Grass: <input type="text" name="grass" value="<%=editPoke.damages.grass%>" /><br />
+      Ice: <input type="text" name="ice" value="<%=editPoke.damages.ice%>" /><br />
+      Fight: <input type="text" name="fight" value="<%=editPoke.damages.fight%>" /><br />
+      Poison: <input type="text" name="poison" value="<%=editPoke.damages.poison%>" /><br />
+      Ground: <input type="text" name="ground" value="<%=editPoke.damages.ground%>" /><br />
+      Flying: <input type="text" name="flying" value="<%=editPoke.damages.flying%>" /><br />
+      Psychic: <input type="text" name="psychic" value="<%=editPoke.damages.psychic%>" /><br />
+      Bug: <input type="text" name="bug" value="<%=editPoke.damages.bug%>" /><br />
+      Rock: <input type="text" name="rock" value="<%=editPoke.damages.rock%>" /><br />
+      Ghost: <input type="text" name="ghost" value="<%=editPoke.damages.ghost%>" /><br />
+      Dragon: <input type="text" name="dragon" value="<%=editPoke.damages.dragon%>" /><br />
+      Dark: <input type="text" name="dark" value="<%=editPoke.damages.dark%>" /><br />
+      Steel: <input type="text" name="steel" value="<%=editPoke.damages.steel%>" /><br />
+      <input type="submit" name="" value="Submit Changes" />
+    </form>
+    </div>
+  </body>
+
+</html>

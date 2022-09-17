@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/Public/style.css" rel="stylesheet" type="text/css" />
+    <title>Document</title>
+</head>
+  <body>
+    <div class="selection">
+        <div>
+            <h2>Pokedex Entry - <%=data.name%></h2>
+            <form action="/Pokedex">
+                <input type="submit" value="Back to Pokedex" />
+              </form>
+        </div>
+        <div>
+            <h3><%= data.name%></h3>
+            <img src="<%=data.img%>" alt="<%=data.name%>">
+            <h4>ID # <%=data.id%></h4>
+            <h5><%=data.misc.classification%></h5>
+            <form action="/Pokedex/<%=indexOf%>/edit">
+                <input type="submit" value="Edit Pokemon" />
+              </form>
+              <div>
+                <h4>Type</h4>
+                <ul>
+                    <% for(let i = 0; i < data.type.length; i++) { %>
+                    <li>
+                      <%=data.type[i]%>
+                    </li>
+                    <% } %>
+                  </ul>
+              </div>
+        </div>
+        <div>
+            <h4>Stats</h4>
+            <ul>
+            <% for (const property in data.stats) { %>
+                <li type="none">
+                    <%=property[0].toUpperCase() + property.slice(1, property.length)%>: <%=data.stats[property]%>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Damages</h4>
+            <ul>
+                <% for (const property in data.damages) { %>
+                    <li type="none">
+                        <%=property[0].toUpperCase() + property.slice(1, property.length)%>: <%=data.damages[property]%>
+                    </li>
+                    <% } %>
+                </ul>
+        </div>
+    </div>
+  </body>
+</html>
